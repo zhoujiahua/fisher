@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 # coding:utf8
 
-from flask import Flask, make_response
+from flask import Flask
 import json
 
 app = Flask(__name__)
@@ -11,11 +11,6 @@ app.config.from_object('config')
 @app.route('/')
 def index():
     return 'Hello World!'
-
-
-@app.route('/book/serach')
-def search():
-    pass
 
 
 @app.route('/admin')
