@@ -2,6 +2,7 @@
 # coding:utf8
 from flask import jsonify
 from . import api
+import app.utils.ajax as ajax
 
 
 @api.route('/')
@@ -15,3 +16,13 @@ def user_info():
         'name': 'jerry', 'age': 18
     }
     return jsonify(data)
+
+
+@api.route('/district')
+def api_district():
+    ht = ajax.HTTP()
+    headers = {
+        'content-type': 'application/json'
+    }
+    result = ht.get('http://apis.juhe.cn/xzqh/query?fid=0')
+    return result, 200, headers
