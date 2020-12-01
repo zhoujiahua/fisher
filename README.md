@@ -3,16 +3,17 @@
 ### Project introduction
 
 ```
-python3 pipenv
+The current project is built using Python3 and flask frameworks.
 ```
 
-## Python
+### Python
 
 ```
 Python 3.6
-Used pipenv start project 
+The project virtual environment is managed using Pipenv.
 ```
 
+### Pipenv install
 ```
 pipenv --version 检查安装状态
 pipenv install 安装虚拟环境
@@ -23,6 +24,7 @@ exit 退出
 pipenv graph 查看版本
 ```
 
+### Pip virtualenv install
 ```
 pip install virtualenv # 安装
 virtualenv env # 创建环境 | 在当前目录下面
