@@ -47,3 +47,5 @@ def api_search_list():
         res = ht.get('http://apis.juhe.cn/xzqh/query?fid=' + key)
         result = {'key': key, 'page': page, 'data': res}
         return jsonify(result)
+    else:
+        return jsonify(form.errors)
